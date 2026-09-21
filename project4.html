@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 4 | Registration</title>
+    <link rel="stylesheet" href="project4.css" />
+  </head>
+  <body class="registration-page">
+    <header class="regis-header">
+      <div>
+        <p class="eyebrow">Enrollment</p>
+        <h1>Student Registration Form</h1>
+      </div>
+      <a href="index.html" class="home-button">Back to Home</a>
+    </header>
+
+    <main class="regis-shell">
+      <section class="info-panel">
+        <p class="eyebrow">Welcome</p>
+        <h2>Start your academic journey.</h2>
+        <p>
+          Complete your registration details so we can prepare your student profile and enrollment records.
+        </p>
+        <ul>
+          <li>Fast and simple enrollment</li>
+          <li>Secure personal details</li>
+          <li>Digital record management</li>
+        </ul>
+      </section>
+
+      <section class="form-panel">
+        <form>
+          <div class="field-row">
+            <label for="name">Student Name</label>
+            <input id="name" type="text" placeholder="Enter name" />
+          </div>
+
+          <div class="field-row">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Enter email" />
+          </div>
+
+          <div class="field-row">
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter password" />
+          </div>
+
+          <div class="field-row radio-group">
+            <label>Gender</label>
+            <div class="choices">
+              <label><input type="radio" name="gender" /> Male</label>
+              <label><input type="radio" name="gender" /> Female</label>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <label for="course">Course</label>
+            <select id="course">
+              <option>BSIT</option>
+              <option>BSCS</option>
+              <option>BSTM</option>
+              <option>BTLED</option>
+              <option>BSOAD</option>
+              <option>BECED</option>
+              <option>BSHM</option>
+            </select>
+          </div>
+
+          <div class="field-row checkbox-group">
+            <label>Skills</label>
+            <div class="choices">
+              <label><input type="checkbox" /> HTML</label>
+              <label><input type="checkbox" /> CSS</label>
+              <label><input type="checkbox" /> JavaScript</label>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <label for="photo">Profile Picture</label>
+            <input id="photo" type="file" />
+          </div>
+
+          <div class="field-row">
+            <label for="address">Address</label>
+            <textarea id="address" rows="4" placeholder="Enter address"></textarea>
+          </div>
+
+          <div class="button-row">
+            <button type="submit" class="primary">Submit</button>
+            <button type="reset" class="secondary">Reset</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
