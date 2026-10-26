@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 7 | jQuery Student Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="project7.css" />
+</head>
+<body class="project-seven">
+  <!-- Top Bar / Header -->
+  <header class="page-header">
+    <div class="header-brand">
+      <p class="eyebrow">Finals Activity 3 • jQuery DOM Manipulation</p>
+      <h1>Interactive Student Portal & Directory</h1>
+    </div>
+    <a href="index.html#projects" class="home-button">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+      <span>Back to Home</span>
+    </a>
+  </header>
+
+  <main class="page-shell">
+    <!-- Intro Banner -->
+    <section class="intro-panel">
+      <div class="intro-badge">jQuery Powered</div>
+      <h2>Dynamic DOM Animation & Table Filtering</h2>
+      <p>
+        Explore client-side jQuery DOM manipulation, animated element visibility transitions, 
+        event state feedback, live select binding, and striped row table filtering below.
+      </p>
+    </section>
+
+    <!-- Main Container -->
+    <div class="main portal-grid">
+      <!-- Left Column: Student Profile & Controls -->
+      <section class="portal-panel profile-section">
+        <div class="panel-tag">Student Card</div>
+        <h1 id="title" class="portal-heading">My Student Profile</h1>
+        <p id="subTitle" class="portal-sub">Welcome to my Interactive profile!</p>
+
+        <!-- Dynamic Profile Card Target -->
+        <div class="studInfo">
+          <div class="stud-badge">Verified Enrolled</div>
+          <h2 class="stud-title">Student Information</h2>
+          <div class="info-row">
+            <span class="info-lbl">Name:</span>
+            <strong>Christian Rey Kasilag</strong>
+          </div>
+          <div class="info-row">
+            <span class="info-lbl">Course:</span>
+            <label id="course" class="course-pill"><b>BSIT</b></label>
+          </div>
+          <div class="info-row">
+            <span class="info-lbl">Year Level:</span>
+            <span>3rd Year</span>
+          </div>
+        </div>
+
+        <!-- Profile Action Buttons -->
+        <div class="action-btn-group">
+          <button id="change" class="portal-btn">Change Title</button>
+          <button id="hide" class="portal-btn">Hide Profile</button>
+          <button id="show" class="portal-btn">Show Profile</button>
+        </div>
+
+        <!-- Action Status Display -->
+        <div class="action-box">
+          <span class="box-label">Profile Interaction Status:</span>
+          <p id="action" class="status-callout">Welcome!</p>
+        </div>
+
+        <!-- Course Selector -->
+        <div class="course-select-wrap">
+          <label for="selectCourse" class="select-label">Choose your Program / Course:</label>
+          <select id="selectCourse" class="portal-select">
+            <option value="" disabled selected>Select Program Below</option>
+            <option value="BSIT">BSIT - Information Technology</option>
+            <option value="BSOAD">BSOAD - Office Administration</option>
+            <option value="BSTM">BSTM - Tourism Management</option>
+            <option value="BSCS">BSCS - Computer Science</option>
+            <option value="BSHM">BSHM - Hospitality Management</option>
+            <option value="BTLED">BTLED - Technology & Livelihood</option>
+          </select>
+          <p id="courseOutput" class="course-feedback">No course selected</p>
+        </div>
+      </section>
+
+      <!-- Right Column: Student Table & Row Filters -->
+      <section class="portal-panel table-section">
+        <div class="panel-tag">Academic Records</div>
+        <h2 class="portal-heading">Student Directory</h2>
+        <h4 id="tableTitle" class="table-subtitle">Registered Students</h4>
+
+        <!-- Table Wrap -->
+        <div class="table-container">
+          <table border="2" id="studTable" class="modern-table">
+            <thead>
+              <tr id="tableHeader">
+                <th>No.</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Year Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><strong>Juan</strong></td>
+                <td><span class="tbl-badge">BSIT</span></td>
+                <td>3rd Year</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><strong>Maria</strong></td>
+                <td><span class="tbl-badge">BSCS</span></td>
+                <td>3rd Year</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><strong>Pedro</strong></td>
+                <td><span class="tbl-badge">BSIS</span></td>
+                <td>2nd Year</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><strong>Ana</strong></td>
+                <td><span class="tbl-badge">BSIT</span></td>
+                <td>3rd Year</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="end-msg">End of Student List</p>
+
+        <!-- Table Controls Cluster -->
+        <div class="table-btn-group">
+          <button id="even" class="portal-btn btn-filter">Apply Even Rows</button>
+          <button id="odd" class="portal-btn btn-filter">Apply Odd Rows</button>
+          <button id="hideTable" class="portal-btn btn-toggle">Hide Table</button>
+          <button id="showTable" class="portal-btn btn-toggle">Show Table</button>
+        </div>
+
+        <!-- Table Action Status -->
+        <div class="table-action-box">
+          <span class="box-label">Table Action Status:</span>
+          <p id="tableAction" class="status-callout">Table Action</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="project7.js"></script>
+</body>
+</html>

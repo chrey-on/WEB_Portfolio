@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 8 | AJAX & REST API Loader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project8.css" />
+</head>
+<body class="project-eight">
+  <!-- Top Bar / Header -->
+  <header class="page-header">
+    <div class="header-brand">
+      <p class="eyebrow">Finals Activity 4 • AJAX & REST APIs</p>
+      <h1>AJAX & REST API Student Data Explorer</h1>
+    </div>
+    <a href="index.html#projects" class="home-button">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+      <span>Back to Home</span>
+    </a>
+  </header>
+
+  <main class="page-shell">
+    <!-- Intro Banner -->
+    <section class="intro-panel">
+      <div class="intro-badge">AJAX Architecture</div>
+      <h2>Asynchronous HTTP Data Retrieval</h2>
+      <p>
+        Experience asynchronous data fetching without reloading the browser. 
+        Utilizing <code>XMLHttpRequest</code> and RESTful API endpoints, fetch remote user datasets or local files with live ReadyState telemetry.
+      </p>
+    </section>
+
+    <!-- Main Workspace -->
+    <div class="api-workspace">
+      <!-- Left Column: Controls & ReadyState Monitor -->
+      <section class="panel-box controls-panel">
+        <div class="panel-header">
+          <span class="panel-pill">Dispatcher</span>
+          <h2 class="panel-title">Request Controls</h2>
+        </div>
+
+        <p class="panel-sub">
+          Trigger asynchronous GET requests to external REST endpoints or local files:
+        </p>
+
+        <div class="action-buttons">
+          <!-- Primary Act 4 Target Button -->
+          <button id="loadBtn" class="request-btn">
+            <span class="btn-icon-wrap">🌐</span>
+            <div class="btn-txt">
+              <strong>Load Students (API)</strong>
+              <small>jsonplaceholder.typicode.com/users/1</small>
+            </div>
+          </button>
+
+          <!-- Additional Local AJAX Loaders -->
+          <button id="loadLocalBtn" class="request-btn">
+            <span class="btn-icon-wrap">📄</span>
+            <div class="btn-txt">
+              <strong>Load Local HTML</strong>
+              <small>students.html</small>
+            </div>
+          </button>
+
+          <button id="loadTxtBtn" class="request-btn">
+            <span class="btn-icon-wrap">📝</span>
+            <div class="btn-txt">
+              <strong>Load Local Text</strong>
+              <small>students.txt</small>
+            </div>
+          </button>
+        </div>
+
+        <!-- ReadyState Lifecycle Tracker -->
+        <div class="lifecycle-wrap">
+          <h4 class="lifecycle-title">XMLHttpRequest ReadyState Lifecycle</h4>
+          <div class="state-stepper">
+            <div class="state-step" id="rs-1">
+              <span class="step-num">1</span>
+              <div class="step-lbl">
+                <strong>OPENED</strong>
+                <small>open() called</small>
+              </div>
+            </div>
+            <div class="state-step" id="rs-2">
+              <span class="step-num">2</span>
+              <div class="step-lbl">
+                <strong>HEADERS</strong>
+                <small>Status received</small>
+              </div>
+            </div>
+            <div class="state-step" id="rs-3">
+              <span class="step-num">3</span>
+              <div class="step-lbl">
+                <strong>LOADING</strong>
+                <small>Downloading text</small>
+              </div>
+            </div>
+            <div class="state-step" id="rs-4">
+              <span class="step-num">4</span>
+              <div class="step-lbl">
+                <strong>DONE</strong>
+                <small>200 OK Complete</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button id="clearBtn" class="clear-btn">Clear Results</button>
+      </section>
+
+      <!-- Right Column: Results Display & Parsed Card -->
+      <section class="panel-box result-panel">
+        <div class="panel-header">
+          <span class="panel-pill">Response Feed</span>
+          <h2 class="panel-title">Student Information</h2>
+        </div>
+
+        <!-- View Switcher Tabs -->
+        <div class="view-tabs">
+          <button class="view-tab active" id="tabFormatted" onclick="switchView('formatted')">Parsed Card View</button>
+          <button class="view-tab" id="tabRaw" onclick="switchView('raw')">Raw Response (Target)</button>
+        </div>
+
+        <!-- Formatted Card View -->
+        <div class="formatted-view" id="formattedView">
+          <div class="student-card-placeholder" id="studentCardPlaceholder">
+            <div class="placeholder-icon">📡</div>
+            <h3>No Student Loaded Yet</h3>
+            <p>Click "Load Students (API)" or load local files to dispatch an asynchronous request.</p>
+          </div>
+
+          <div class="student-card" id="studentCard" style="display: none;">
+            <div class="card-top">
+              <div class="student-avatar" id="avatarLetter">S</div>
+              <div>
+                <h3 id="cardName" class="card-name">Student Name</h3>
+                <p id="cardUsername" class="card-user">@username</p>
+              </div>
+              <span class="status-chip">HTTP 200 OK</span>
+            </div>
+
+            <div class="card-details-grid">
+              <div class="detail-item">
+                <span class="detail-label">Email:</span>
+                <span id="cardEmail" class="detail-val">user@example.com</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Phone:</span>
+                <span id="cardPhone" class="detail-val">+1-202-555-0199</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Website:</span>
+                <span id="cardWebsite" class="detail-val">example.com</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Company:</span>
+                <span id="cardCompany" class="detail-val">Tech Corp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Raw Result Target (Required by original rubric) -->
+        <div class="raw-view" id="rawView" style="display: none;">
+          <div class="raw-header">
+            <span>Target Element: <code>#result</code></span>
+            <small>Raw responseText output</small>
+          </div>
+          <pre><p id="result" class="raw-output">No Information Yet</p></pre>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="project8.js"></script>
+</body>
+</html>

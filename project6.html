@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 6 | Async Promises Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project6.css" />
+</head>
+<body class="project-six">
+  <!-- Top Bar / Header -->
+  <header class="page-header">
+    <div class="header-brand">
+      <p class="eyebrow">Finals Activity 2 • Asynchronous JavaScript</p>
+      <h1>Promise Pipeline & Async Task Simulator</h1>
+    </div>
+    <a href="index.html#projects" class="home-button">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+      <span>Back to Home</span>
+    </a>
+  </header>
+
+  <main class="page-shell">
+    <!-- Intro Banner -->
+    <section class="intro-panel">
+      <div class="intro-badge">Asynchronous Execution</div>
+      <h2>Chained Promises & Non-Blocking Timeouts</h2>
+      <p>
+        Demonstrating the JavaScript event loop, asynchronous Promise chaining with <code>.then()</code>, 
+        and sequential timed dispatching. Run the Promise pipeline or trigger the delayed schedule below.
+      </p>
+    </section>
+
+    <!-- Simulation Dashboard -->
+    <div class="dashboard-grid">
+      <!-- Section A: Promise Pipeline -->
+      <section class="panel-box promise-panel">
+        <div class="panel-header">
+          <div>
+            <span class="panel-pill">Pipeline 01</span>
+            <h3 class="panel-title">Chained Promise Lifecycle</h3>
+          </div>
+          <button id="loadBtn" class="action-btn btn-primary">
+            <span class="btn-pulse"></span>
+            <span>Run Pipeline (Load)</span>
+          </button>
+        </div>
+
+        <!-- Progress Steps -->
+        <div class="stepper-track">
+          <div class="step-node active" id="step-init">
+            <div class="step-icon">01</div>
+            <div class="step-text">
+              <strong>Init</strong>
+              <small>Idle</small>
+            </div>
+          </div>
+          <div class="step-line" id="line-1"></div>
+          <div class="step-node" id="step-config">
+            <div class="step-icon">02</div>
+            <div class="step-text">
+              <strong>Configuring</strong>
+              <small>+1.0s</small>
+            </div>
+          </div>
+          <div class="step-line" id="line-2"></div>
+          <div class="step-node" id="step-compile">
+            <div class="step-icon">03</div>
+            <div class="step-text">
+              <strong>Compiling</strong>
+              <small>+2.0s</small>
+            </div>
+          </div>
+          <div class="step-line" id="line-3"></div>
+          <div class="step-node" id="step-ready">
+            <div class="step-icon">04</div>
+            <div class="step-text">
+              <strong>Ready</strong>
+              <small>+3.0s</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Message Display Target -->
+        <div class="message-display-card">
+          <span class="display-label">Pipeline Status Message:</span>
+          <p id="message" class="pipeline-message">Waiting...</p>
+        </div>
+      </section>
+
+      <!-- Section B: Timed Asynchronous Dispatcher -->
+      <section class="panel-box sequence-panel">
+        <div class="panel-header">
+          <div>
+            <span class="panel-pill">Sequence 02</span>
+            <h3 class="panel-title">Asynchronous Task Sequence</h3>
+          </div>
+          <div class="btn-row">
+            <button id="showBtn" class="action-btn btn-accent">
+              <span>Execute Sequence (Show)</span>
+            </button>
+            <button id="resetBtn" class="reset-btn">Reset All</button>
+          </div>
+        </div>
+
+        <p class="panel-sub">
+          When triggered, three asynchronous callback timeouts execute at 1s, 2s, and 3s intervals to mutate typography, content, and color:
+        </p>
+
+        <!-- 3 Sequential Target Cards -->
+        <div class="cards-cluster">
+          <!-- Card 1 -->
+          <div class="task-card" id="card-1">
+            <div class="task-badge">Delay: 1000ms</div>
+            <div class="task-content">
+              <span class="task-label">Slot 01</span>
+              <p id="text_1" class="task-target">Profile</p>
+            </div>
+            <div class="task-indicator" id="ind-1"></div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="task-card" id="card-2">
+            <div class="task-badge">Delay: 2000ms</div>
+            <div class="task-content">
+              <span class="task-label">Slot 02</span>
+              <p id="text_2" class="task-target">Grades</p>
+            </div>
+            <div class="task-indicator" id="ind-2"></div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="task-card" id="card-3">
+            <div class="task-badge">Delay: 3000ms</div>
+            <div class="task-content">
+              <span class="task-label">Slot 03</span>
+              <p id="text_3" class="task-target">Schedules</p>
+            </div>
+            <div class="task-indicator" id="ind-3"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="project6.js"></script>
+</body>
+</html>

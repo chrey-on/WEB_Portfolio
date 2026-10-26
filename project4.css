@@ -13,6 +13,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -182,14 +187,25 @@ button.secondary {
   .regis-header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 1.2rem 16px;
+    gap: 12px;
   }
 
   .home-button {
     width: 100%;
+    justify-content: center;
   }
 
   .regis-shell {
+    width: calc(100% - 24px);
     grid-template-columns: 1fr;
+    padding: 1.5rem 0 3rem;
+  }
+
+  .info-panel,
+  .form-panel {
+    padding: 1.5rem 1.2rem;
+    border-radius: 20px;
   }
 }
 

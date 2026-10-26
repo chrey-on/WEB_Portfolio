@@ -13,6 +13,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -304,14 +309,48 @@ main {
 }
 
 @media (max-width: 520px) {
-  .main-nav {
+  .topbar {
+    padding: 1rem 16px;
+  }
+
+  .brand-wrap {
     width: 100%;
   }
 
-  .main-nav a,
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .main-nav a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+  }
+
   .home-link,
   .button {
     width: 100%;
+    text-align: center;
+  }
+
+  main {
+    width: calc(100% - 24px);
+    padding: 1.5rem 0 3rem;
+  }
+
+  .hero-copy {
+    padding: 1.8rem 1.4rem;
+    border-radius: 20px;
+  }
+
+  .profile-card {
+    padding: 1.5rem 1.2rem;
+    border-radius: 20px;
   }
 
   .cta-row {
@@ -319,6 +358,6 @@ main {
   }
 
   .hero-copy h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }

@@ -3,75 +3,503 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Christian Rey C. Kasilag | Portfolio</title>
+    <meta name="description" content="Portfolio of Christian Rey C. Kasilag - BSIT Student and Software Developer showcasing projects and web development work.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="design.css">
 </head>
-<body>  
-    <header>
-        <div class="brand">
-            <img src="lite_bg.png" alt="Logo">
-            <h2 id="txtPortfolio">My Portfolio</h2>
+<body>
+    <!-- Background glow elements for creative visual appeal -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="brand">
+                <img src="lite_bg.png" alt="Logo" class="brand-logo">
+                <div class="brand-text">
+                    <span class="brand-name">Christian Rey</span>
+                    <span class="brand-tag">Portfolio</span>
+                </div>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#about" class="nav-link">About Me</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-action">
+                <a href="#contact" class="btn btn-outline-sm">Get In Touch</a>
+            </div>
         </div>
-        <nav>
-            <a href="#projects">My Projects</a>
-            <a href="#about">About me</a>
-            <a href="#contact">Contact me</a>
-        </nav>
     </header>
-    <section id="home" class="profContainer" >
-        <div class="profile"> 
-            <img src="WIN_20260527_19_02_02_Pro.jpg" alt="Profile">
-            </div>
-        <div class="profileInfo">
-            <h1>Christian Rey C. Kasilag</h1>
-            <h3>Bachelor of Science in Information Technology</h3>
-            <h3>Software Developer</h3>
-            <div class="buttons">
-                <button><a href="#projects">View My Projects</a></button>
-                <button><a href="#about">Learn More About Me</a></button>
-            </div>
-        </div>
-    </section>
-    <section id="projects" class="projectContainer"> 
-        <div class="project1">
-            <img src="project_1SS.png" alt="Project 1">
-            <h2>Project 1</h2>
-            <button><a href="project1.html">View</a></button>
-            <h2>Profile Page</h2>
-        </div>
-        <div class="project2">
-            <img src="project_2SS.png" alt="Project 2">
-            <h2>Project 2</h2>
-            <button><a href="project2.html">View</a></button>
-            <h2>Student Information Page</h2>
-        </div>
-        <div class="project3">
-            <img src="project_3SS.png" alt="Project 3">
-            <h2>Project 3</h2>
-            <button><a href="project3.html">View</a></button>
-            <h2>Business Landing Page</h2>
-        </div>
-        <div class="project4">
-            <img src="project_4SS.png" alt="Project 4">
-            <h2>Project 4</h2>
-            <button><a href="project4.html">View</a></button>
-            <h2>Student Registration Page</h2>
-        </div>
-    </section>
-    <section class="aboutContainer">
-            <div id="about" class="about">
-                <h1>About me</h1>
-                <h3>My name is Christian Rey C. Kasilag, 
-                    a student of Bachelor of Science in Information Technology at Pambayang dalubhasaan ng Marilao. 
-                    I am a software developer and I have experience in web development and programming. 
-                    I am passionate about creating innovative solutions and continuously improving my skills in the field of technology.</h3>
+
+    <main>
+        <!-- Hero / Profile Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="status-pill">
+                        <span class="status-dot"></span>
+                        <span>Available for Projects & Opportunities</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight-gradient">Christian Rey C. Kasilag</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        Bachelor of Science in Information Technology <span class="separator">•</span> Software Developer
+                    </h2>
+                    <p class="hero-description">
+                        Passionate about crafting responsive web applications, intuitive digital experiences, and continuously expanding my technical knowledge.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore Projects</span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="#about" class="btn btn-glass">
+                            <span>Learn More</span>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </a>
+                    </div>
+
+                    <!-- Mini Highlight Tags -->
+                    <div class="tech-tags">
+                        <span class="tech-tag">Web Development</span>
+                        <span class="tech-tag">UI/UX Design</span>
+                        <span class="tech-tag">Programming</span>
+                        <span class="tech-tag">BSIT @ PDM</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <div class="image-wrapper">
+                            <div class="image-backdrop"></div>
+                            <img src="WIN_20260527_19_02_02_Pro.jpg" alt="Christian Rey C. Kasilag" class="profile-img">
+                        </div>
+                        <!-- Neatly organized info badges placed beneath the photo to keep the portrait 100% visible -->
+                        <div class="profile-badge-row">
+                            <div class="profile-badge-item">
+                                <span class="badge-icon">💻</span>
+                                <div class="badge-text">
+                                    <strong>Software Developer</strong>
+                                    <small>Web & Programming</small>
+                                </div>
+                            </div>
+                            <div class="profile-badge-item">
+                                <span class="badge-icon">🎓</span>
+                                <div class="badge-text">
+                                    <strong>BSIT Student</strong>
+                                    <small>PDM Marilao</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-    <footer id="contact">
-        <div class="contact">
-            <h5>Contact me: 09097038740</h5>
-            <h5>Email: christianreykclg@gmail.com</h5>
+
+        <!-- Projects Showcase Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">My Portfolio</span>
+                    <h2 class="section-title">Featured <span class="highlight-gradient">Projects</span></h2>
+                    <p class="section-subtitle">
+                        Explore some of the web development and coursework projects I have built.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card" data-accent="coral">
+                        <div class="project-image-wrap">
+                            <img src="project_1SS.png" alt="Project 1 Screenshot" class="project-image" loading="lazy">
+                            <span class="project-category">Project 01</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-title">Profile Page</h3>
+                                <span class="project-num">01</span>
+                            </div>
+                            <p class="project-description">
+                                A personal profile showcase highlighting credentials, creative thinking, and modern web interface design.
+                            </p>
+                            <div class="project-footer">
+                                <a href="project1.html" class="btn btn-project">
+                                    <span>View Project</span>
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card" data-accent="teal">
+                        <div class="project-image-wrap">
+                            <img src="project_2SS.png" alt="Project 2 Screenshot" class="project-image" loading="lazy">
+                            <span class="project-category">Project 02</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-title">Student Information Page</h3>
+                                <span class="project-num">02</span>
+                            </div>
+                            <p class="project-description">
+                                An academic dashboard displaying student records, personal profiles, course details, and organized data presentation.
+                            </p>
+                            <div class="project-footer">
+                                <a href="project2.html" class="btn btn-project">
+                                    <span>View Project</span>
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card" data-accent="purple">
+                        <div class="project-image-wrap">
+                            <img src="project_3SS.png" alt="Project 3 Screenshot" class="project-image" loading="lazy">
+                            <span class="project-category">Project 03</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-title">Business Landing Page</h3>
+                                <span class="project-num">03</span>
+                            </div>
+                            <p class="project-description">
+                                A responsive and modern business storefront landing page crafted with clean branding, service cards, and call-to-actions.
+                            </p>
+                            <div class="project-footer">
+                                <a href="project3.html" class="btn btn-project">
+                                    <span>View Project</span>
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="project-card" data-accent="amber">
+                        <div class="project-image-wrap">
+                            <img src="project_4SS.png" alt="Project 4 Screenshot" class="project-image" loading="lazy">
+                            <span class="project-category">Project 04</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-title">Student Registration Page</h3>
+                                <span class="project-num">04</span>
+                            </div>
+                            <p class="project-description">
+                                A structured student enrollment and registration form interface with user inputs, validation layout, and intuitive flow.
+                            </p>
+                            <div class="project-footer">
+                                <a href="project4.html" class="btn btn-project">
+                                    <span>View Project</span>
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="project-card" data-accent="cyan">
+                        <div class="project-image-wrap">
+                            <img src="project_5SS.png" alt="Project 5 Screenshot" class="project-image" loading="lazy">
+                            <span class="project-category">Project 05</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-title">Interactive DOM Events Lab</h3>
+                                <span class="project-num">05</span>
+                            </div>
+                            <p class="project-description">
+                                A dynamic event handling playground demonstrating click, double-click, hover transitions, real-time input binding, and image transforms.
+                            </p>
+                            <div class="project-footer">
+                                <a href="project5.html" class="btn btn-project">
+                                    <span>View Project</span>
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6 -->
+                    <article class="project-card" data-accent="indigo">
+                        <div class="project-image-wrap">
+                            <img src="project_6SS.png" alt="Project 6 Screenshot" class="project-image" loading="lazy">
+                            <span class="project-category">Project 06</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-title">Async Promises Simulator</h3>
+                                <span class="project-num">06</span>
+                            </div>
+                            <p class="project-description">
+                                An asynchronous workflow simulator demonstrating JavaScript Promises, chained .then() pipeline stages, and delayed callback executions.
+                            </p>
+                            <div class="project-footer">
+                                <a href="project6.html" class="btn btn-project">
+                                    <span>View Project</span>
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 7 -->
+                    <article class="project-card" data-accent="emerald">
+                        <div class="project-image-wrap">
+                            <img src="project_7SS.png" alt="Project 7 Screenshot" class="project-image" loading="lazy">
+                            <span class="project-category">Project 07</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-title">jQuery Student Portal</h3>
+                                <span class="project-num">07</span>
+                            </div>
+                            <p class="project-description">
+                                An interactive academic portal with jQuery-driven DOM animation, show/hide toggles, course dropdown binding, and striped table row filters.
+                            </p>
+                            <div class="project-footer">
+                                <a href="project7.html" class="btn btn-project">
+                                    <span>View Project</span>
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 8 -->
+                    <article class="project-card" data-accent="blue">
+                        <div class="project-image-wrap">
+                            <img src="project_8SS.png" alt="Project 8 Screenshot" class="project-image" loading="lazy">
+                            <span class="project-category">Project 08</span>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3 class="project-title">AJAX REST API Explorer</h3>
+                                <span class="project-num">08</span>
+                            </div>
+                            <p class="project-description">
+                                An asynchronous HTTP client application utilizing XMLHttpRequest to dynamically fetch, parse, and present remote student and user datasets.
+                            </p>
+                            <div class="project-footer">
+                                <a href="project8.html" class="btn btn-project">
+                                    <span>View Project</span>
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content-card">
+                        <span class="section-badge">Get To Know Me</span>
+                        <h2 class="section-title">About <span class="highlight-gradient">Me</span></h2>
+                        <div class="about-text">
+                            <p class="lead-text">
+                                Hello! My name is <strong>Christian Rey C. Kasilag</strong>, a dedicated student pursuing a <strong>Bachelor of Science in Information Technology</strong> at <strong>Pambayang Dalubhasaan ng Marilao</strong>.
+                            </p>
+                            <p>
+                                I am an aspiring software developer with hands-on experience in web development, programming, and interface design. I have a deep passion for building practical, innovative solutions that solve real problems.
+                            </p>
+                            <p>
+                                Always curious and eager to learn, I continuously strive to sharpen my technical skills, adopt modern industry best practices, and collaborate on impactful projects.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="about-highlights-card">
+                        <h3 class="highlights-title">Core Highlights</h3>
+                        
+                        <div class="highlight-item">
+                            <div class="highlight-icon-box icon-blue">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                            </div>
+                            <div class="highlight-info">
+                                <h4>Education</h4>
+                                <p>BS in Information Technology at Pambayang Dalubhasaan ng Marilao (PDM)</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-item">
+                            <div class="highlight-icon-box icon-teal">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </div>
+                            <div class="highlight-info">
+                                <h4>Specialization</h4>
+                                <p>Web Development, Responsive Design & Software Engineering</p>
+                            </div>
+                        </div>
+
+                        <div class="highlight-item">
+                            <div class="highlight-icon-box icon-purple">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                            </div>
+                            <div class="highlight-info">
+                                <h4>Passion & Goal</h4>
+                                <p>Continuous learning, modern technologies & building user-friendly digital tools</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact & Footer Section -->
+    <footer id="contact" class="footer-section">
+        <div class="container footer-container">
+            <div class="contact-header">
+                <span class="section-badge">Connect</span>
+                <h2 class="section-title">Let's <span class="highlight-gradient">Work Together</span></h2>
+                <p class="section-subtitle">
+                    Feel free to reach out for collaborations, questions, or project opportunities.
+                </p>
+            </div>
+
+            <div class="contact-cards">
+                <!-- Phone Card (Click to Copy) -->
+                <div class="contact-card contact-card-clickable" id="phoneCard" role="button" tabindex="0" title="Click to copy phone number">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div class="contact-card-text">
+                        <div class="contact-label-row">
+                            <span class="contact-label">Call / SMS</span>
+                            <span class="copy-badge" id="phoneCopyBadge">
+                                <svg class="badge-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                <span>Click to copy</span>
+                            </span>
+                        </div>
+                        <strong class="contact-value" id="phoneText">09097038740</strong>
+                    </div>
+                </div>
+
+                <!-- Email Card (Direct Gmail Link) -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=christianreykclg@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-card" title="Open Gmail in new tab">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </div>
+                    <div class="contact-card-text">
+                        <div class="contact-label-row">
+                            <span class="contact-label">Email Me</span>
+                            <span class="open-badge">
+                                <span>Open Gmail</span>
+                                <svg class="badge-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </span>
+                        </div>
+                        <strong class="contact-value">christianreykclg@gmail.com</strong>
+                    </div>
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-brand">
+                    <img src="lite_bg.png" alt="Logo" class="footer-logo">
+                    <span>Christian Rey C. Kasilag • Portfolio</span>
+                </div>
+                <p class="copyright">
+                    &copy; 2026 Christian Rey C. Kasilag. All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notification" role="status" aria-live="polite">
+        <div class="toast-icon-wrap">
+            <svg class="toast-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </div>
+        <div class="toast-body">
+            <strong class="toast-title">Copied to Clipboard!</strong>
+            <span class="toast-subtitle">09097038740</span>
+        </div>
+    </div>
+
+    <script>
+        const phoneCard = document.getElementById('phoneCard');
+        const phoneBadge = document.getElementById('phoneCopyBadge');
+        const toast = document.getElementById('toast');
+        let toastTimer = null;
+
+        const defaultBadgeHtml = '<svg class="badge-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg><span>Click to copy</span>';
+        const copiedBadgeHtml = '<svg class="badge-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Copied!</span>';
+
+        if (phoneCard) {
+            phoneCard.addEventListener('click', function() {
+                const number = '09097038740';
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(number).then(onCopySuccess).catch(fallbackCopy);
+                } else {
+                    fallbackCopy();
+                }
+
+                function onCopySuccess() {
+                    if (phoneBadge) {
+                        phoneBadge.innerHTML = copiedBadgeHtml;
+                        phoneBadge.classList.add('copied');
+                        setTimeout(() => {
+                            phoneBadge.innerHTML = defaultBadgeHtml;
+                            phoneBadge.classList.remove('copied');
+                        }, 2500);
+                    }
+                    showToast();
+                }
+
+                function fallbackCopy() {
+                    const temp = document.createElement('textarea');
+                    temp.value = number;
+                    temp.style.position = 'fixed';
+                    temp.style.opacity = '0';
+                    document.body.appendChild(temp);
+                    temp.select();
+                    try {
+                        document.execCommand('copy');
+                        onCopySuccess();
+                    } catch(e) {
+                        console.error('Copy failed', e);
+                    }
+                    document.body.removeChild(temp);
+                }
+            });
+
+            phoneCard.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    phoneCard.click();
+                }
+            });
+        }
+
+        function showToast() {
+            if (!toast) return;
+            if (toastTimer) {
+                clearTimeout(toastTimer);
+                toast.classList.remove('show');
+                void toast.offsetWidth;
+            }
+            toast.classList.add('show');
+            toastTimer = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2600);
+        }
+    </script>
 </body>
 </html>
